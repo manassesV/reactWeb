@@ -1,11 +1,11 @@
 import React from 'react';
 import {Switch, Route } from 'react-router-dom';
 
-import Search from './pages/Search';
-import Produto from './pages/Produtos';
+import Search from './pages/Search/index';
+import Produto from './pages/Produtos/index';
 
-const path = window.location.hostname !== 'localhost' ?   '/react/fiap-react-17mob' : '/';
-
+const path = window.location.hostname !== 'localhost' ?   '/reactWeb/' : '/reactWeb/';
+alert(window.location.hostname)
 const Routes = () => (
 <Switch>
     <Route
