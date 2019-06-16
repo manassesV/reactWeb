@@ -37,7 +37,7 @@ class Search extends Component {
           
                 <tr className="trtable">
                     <Link
-                    to={`/product/${item.id}`}
+                    to={`product/${item.id}`}
                     className="texttable"
                     >
                     <td  key={item.id} className="mdl-cell--12-col">
