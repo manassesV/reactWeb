@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ProductAPI from '../../service/product';
-
+import '../../index.css'
 import axios from 'axios';
 
 import NumberFormat from 'react-number-format';
@@ -43,7 +43,8 @@ class Produto extends Component {
                 <div className="mdl-grid  mdl-shadow--2dp white">
 
                     <div className="mdl-cell mdl-cell--6-col demo-card-wide mdl-card mdl-shadow--2dp">
-                        <img className="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone" src={data.pictures[0].url} />
+                        <img className=" imgproduct"
+                         src={data.pictures[0].url} />
                     </div>
                     <div className="mdl-cell mdl-cell--6-col">
                         <div className="mdl-cell mdl-cell--12-col white">
@@ -56,6 +57,7 @@ class Produto extends Component {
                             <div className="mdl-card__title">
                                 <h2 className="mdl-card__title-text">
                                     <NumberFormat value={data.price} displayType={'text'}
+                                        decimalScale="2"
                                         thousandSeparator={true} prefix={'R$ '}
                                         renderText={value => <div>{value}</div>} />
 

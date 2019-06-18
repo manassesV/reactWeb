@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {Link} from 'react-router-dom';
 import SearchAPI from '../../service/search';
+import '../../index.css'
 
 
 class Search extends Component {
@@ -41,10 +42,13 @@ class Search extends Component {
                     className="texttable"
                     >
                     <td  key={item.id} className="mdl-cell--12-col">
-                       <span>{item.id}</span>
-        
-                       <span >{item.title}</span>
-                      
+                       <div class="mdl-grid">
+                          <div class="mdl-cell mdl-cell--3-col"><span>{item.id}</span></div>
+                          <div class="mdl-cell mdl-cell--7-col"><span >{item.title}</span></div>
+                          <div class="mdl-cell mdl-cell--2-col">
+                             <img  src={item.thumbnail}   className="img"  />
+                             </div>
+                         </div>
                     </td>
                     </Link>
                 </tr>
@@ -63,7 +67,7 @@ class Search extends Component {
         return (
             <Fragment >
                 <div className="mdl-grid">
-                    <header className="mdl-layout__header">
+                    <header className="mdl-cell--12-col" >
                         <div className="mdl-layout__header-row">
                            <div className="mdl-layout-spacer"></div>
                                 <div className="mdl-textfield mdl-js-textfield mdl-textfield--expandable
